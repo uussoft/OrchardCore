@@ -348,6 +348,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrchardCore.AdminTrees.Abst
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrchardCore.AdminTrees", "src\OrchardCore.Modules\OrchardCore.AdminTrees\OrchardCore.AdminTrees.csproj", "{9B11A694-BD8F-47F0-AF0C-BC7E11579DC4}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrchardCore.Course", "src\OrchardCore.Modules\OrchardCore.Course\OrchardCore.Course.csproj", "{B55EE848-6198-47F0-952C-431581FECBDD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -918,6 +920,10 @@ Global
 		{9B11A694-BD8F-47F0-AF0C-BC7E11579DC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B11A694-BD8F-47F0-AF0C-BC7E11579DC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B11A694-BD8F-47F0-AF0C-BC7E11579DC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B55EE848-6198-47F0-952C-431581FECBDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B55EE848-6198-47F0-952C-431581FECBDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B55EE848-6198-47F0-952C-431581FECBDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B55EE848-6198-47F0-952C-431581FECBDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1081,6 +1087,7 @@ Global
 		{76871CE0-43F9-49D3-AAAB-4A8510F76447} = {A066395F-6F73-45DC-B5A6-B4E306110DCE}
 		{3850142E-FA8B-4C26-A4BA-542928D4DF35} = {F23AC6C2-DE44-4699-999D-3C478EF3D691}
 		{9B11A694-BD8F-47F0-AF0C-BC7E11579DC4} = {90030E85-0C4F-456F-B879-443E8A3F220D}
+		{B55EE848-6198-47F0-952C-431581FECBDD} = {90030E85-0C4F-456F-B879-443E8A3F220D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {46A1D25A-78D1-4476-9CBF-25B75E296341}

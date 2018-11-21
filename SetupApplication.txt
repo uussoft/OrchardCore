@@ -1,1 +1,1 @@
-Data Source=127.0.0.1;Initial Catalog=wwwxuebakutangcom;User Id=root;Password=810613
+Data Source=127.0.0.1;Initial Catalog=xbkt;User Id=root;Password=810613

@@ -3,28 +3,28 @@
 
 @model AddFieldViewModel
 
-<h1>@RenderTitleSegments(T["Add New Field To \"{0}\"", Model.Part.DisplayName()])</h1>
+<h1>@RenderTitleSegments(T["将新字段添加到 \"{0}\"", Model.Part.DisplayName()])</h1>
 
 <form asp-action="AddFieldTo">
     @Html.ValidationSummary()
     <fieldset class="form-group">
         <div class="row col-md">
-            <label for="DisplayName">@T["Display Name"]</label>
+            <label for="DisplayName">@T["显示名称"]</label>
             <input asp-for="DisplayName" class="form-control" autofocus />
-            <span class="hint">@T["Name of the field as it will be displayed in screens."]</span>
+            <span class="hint">@T["屏幕上显示的字段名称"]</span>
         </div>
     </fieldset>
 
     <fieldset class="form-group">
         <div class="row col-sm">
-            <label for="Name">@T["Technical Name"]</label>
+            <label for="Name">@T["技术名称"]</label>
             <input asp-for="Name" class="form-control" />
-            <span class="hint">@T["Technical name of the field."]</span>
+            <span class="hint">@T["字段的技术名称"]</span>
         </div>
     </fieldset>
 
     <fieldset class="form-group">
-        <label for="DisplayName">@T["Field Type"]</label>
+        <label for="DisplayName">@T["字段类型"]</label>
         <ul class="list-group w-md-50">
             @for (var i = 0; i < Model.Fields.Count; i++)
             {
@@ -39,7 +39,7 @@
     </fieldset>
 
     <fieldset class="form-group">
-        <button class="btn btn-primary" type="submit">@T["Save"]</button>
+        <button class="btn btn-primary" type="submit">@T["保存"]</button>
     </fieldset>
 </form>
 

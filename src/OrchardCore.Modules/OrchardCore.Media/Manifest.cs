@@ -16,5 +16,5 @@ using OrchardCore.Modules.Manifest;
         "OrchardCore.ContentTypes",
         "OrchardCore.Title"
     },
-    Category = "Content Management"
+    Category = "内容管理"
 )]

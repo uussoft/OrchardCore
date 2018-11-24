@@ -6,5 +6,5 @@ using OrchardCore.Modules.Manifest;
     Website = "http://orchardproject.net",
     Version = "2.0.0",
     Description = "Adds feeds capabilities.",
-    Category = "Content"
+    Category = "内容管理"
 )]

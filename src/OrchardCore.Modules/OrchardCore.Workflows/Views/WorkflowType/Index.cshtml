@@ -13,7 +13,7 @@
                     @T["Bulk Actions"]
                 </button>
                 <div class="dropdown-menu" aria-labelledby="bulk-actions-button">
-                    <button type="submit" name="BulkAction" value="@WorkflowTypeBulkAction.Delete" form="workflow-types-form" class="dropdown-item"> @T["Delete"]</a>
+                    <button type="submit" name="BulkAction" value="@WorkflowTypeBulkAction.Delete" form="workflow-types-form" class="dropdown-item"> @T["删除"]</a>
                 </div>
             </div>
         </li>
@@ -35,9 +35,9 @@
                 <li class="list-group-item">
                     <div class="properties">
                         <div class="related">
-                            <a asp-action="Edit" asp-route-id="@entry.WorkflowType.Id" asp-route-returnUrl="@FullRequestPath" class="btn btn-primary btn-sm">@T["Edit"]</a>
+                            <a asp-action="Edit" asp-route-id="@entry.WorkflowType.Id" asp-route-returnUrl="@FullRequestPath" class="btn btn-primary btn-sm">@T["编辑"]</a>
                             <a asp-action="EditProperties" asp-route-id="@entry.WorkflowType.Id" asp-route-returnUrl="@FullRequestPath" class="btn btn-primary btn-sm">@T["Properties"]</a>
-                            <a asp-action="Delete" asp-route-id="@entry.WorkflowType.Id" class="btn btn-danger btn-sm" itemprop="RemoveUrl UnsafeUrl">@T["Delete"]</a>
+                            <a asp-action="Delete" asp-route-id="@entry.WorkflowType.Id" class="btn btn-danger btn-sm" itemprop="RemoveUrl UnsafeUrl">@T["删除"]</a>
                             <a asp-action="Duplicate" asp-route-id="@entry.WorkflowType.Id" asp-route-returnUrl="@FullRequestPath" class="btn btn-primary btn-sm">@T["Duplicate"]</a>
                         </div>
 

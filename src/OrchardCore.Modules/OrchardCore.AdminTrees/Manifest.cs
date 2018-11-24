@@ -6,5 +6,5 @@ using OrchardCore.Modules.Manifest;
     Website = "http://orchardproject.net",
     Version = "0.0.1",
     Description = "The admin trees enables user custom admin menus.",
-    Category = "Content Management"
+    Category = "内容管理"
 )]

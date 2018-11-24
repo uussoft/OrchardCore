@@ -5,12 +5,12 @@
 
 @{
     var typeDisplayName = Model.TypeDisplayName;
-    var pageTitle = T["Manage Content"];
-    var createLinkText = T["Create New Content"];
+    var pageTitle = T["内容管理"];
+    var createLinkText = T["创建新内容"];
     if (!string.IsNullOrWhiteSpace(typeDisplayName))
     {
-        pageTitle = T["Manage {0} Content", (string)typeDisplayName];
-        createLinkText = T["Create New {0}", (string)typeDisplayName];
+        pageTitle = T["管理{0}类型的内容", (string)typeDisplayName];
+        createLinkText = T["创建新的{0}", (string)typeDisplayName];
     }
 
     var tenantPrefix = ("/" + ShellSettings.RequestUrlPrefix ?? string.Empty).TrimEnd('/');
@@ -18,17 +18,17 @@
 
     IEnumerable<string> cultures = Model.Options.Cultures;
     List<SelectListItem> contentStatuses = new List<SelectListItem>() {
-new SelectListItem() { Text = T["latest"].Value, Value = ContentsStatus.Latest.ToString() },
-new SelectListItem() { Text = T["owned by me"].Value, Value = ContentsStatus.Owner.ToString() },
-new SelectListItem() { Text = T["published"].Value, Value = ContentsStatus.Published.ToString() },
-new SelectListItem() { Text = T["unpublished"].Value, Value = ContentsStatus.Draft.ToString() },
-new SelectListItem() { Text = T["all versions"].Value, Value = ContentsStatus.AllVersions.ToString() }
+new SelectListItem() { Text = T["最新的"].Value, Value = ContentsStatus.Latest.ToString() },
+new SelectListItem() { Text = T["私有的"].Value, Value = ContentsStatus.Owner.ToString() },
+new SelectListItem() { Text = T["已发布"].Value, Value = ContentsStatus.Published.ToString() },
+new SelectListItem() { Text = T["未发布"].Value, Value = ContentsStatus.Draft.ToString() },
+new SelectListItem() { Text = T["所有版本"].Value, Value = ContentsStatus.AllVersions.ToString() }
 };
     List<SelectListItem> contentSorts = new List<SelectListItem>() {
-new SelectListItem() { Text = T["recently created"].Value, Value = ContentsOrder.Created.ToString() },
-new SelectListItem() { Text = T["recently modified"].Value, Value = ContentsOrder.Modified.ToString() },
-new SelectListItem() { Text = T["recently published"].Value, Value = ContentsOrder.Published.ToString() },
-new SelectListItem() { Text = T["title"].Value, Value = ContentsOrder.Title.ToString() }
+new SelectListItem() { Text = T["最新创建"].Value, Value = ContentsOrder.Created.ToString() },
+new SelectListItem() { Text = T["最新修改"].Value, Value = ContentsOrder.Modified.ToString() },
+new SelectListItem() { Text = T["最新发布"].Value, Value = ContentsOrder.Published.ToString() },
+new SelectListItem() { Text = T["标题"].Value, Value = ContentsOrder.Title.ToString() }
 };
 }
 <h1>@RenderTitleSegments(pageTitle)</h1>
@@ -58,11 +58,11 @@ new SelectListItem() { Text = T["title"].Value, Value = ContentsOrder.Title.ToSt
     <fieldset class="filter-options container-fluid">
         <div class="row">
             <div class="col-md-2 col-xl-1 form-group">
-                <label for="contentResults" class="label col-form-label">@T["Filter"]</label>
+                <label for="contentResults" class="label col-form-label">@T["筛选"]</label>
             </div>
             <div class="col-md-4 col-xl-3 form-group">
                 <select id="contentResults" class="form-control" name="Id">
-                    <option value="">@T["All content types"]</option>
+                    <option value="">@T["所有内容类型"]</option>
                     @foreach (var option in Model.Options.FilterOptions)
                     {
                         string isSelected = option.Key == Model.Options.SelectedFilter ? "selected='selected'" : string.Empty;
@@ -85,19 +85,19 @@ new SelectListItem() { Text = T["title"].Value, Value = ContentsOrder.Title.ToSt
                 </div>
                 }*@
             <div class="col-md-2 col-xl-1 form-group">
-                <label for="filterResults" class="label col-form-label">@T["Show"]</label>
+                <label for="filterResults" class="label col-form-label">@T["显示"]</label>
             </div>
             <div class="col-md-4 col-xl-2 form-group">
                 <select id="filterResults" class="form-control" name="Options.ContentsStatus" asp-items="@contentStatuses"></select>
             </div>
             <div class="col-md-2 col-xl-1 form-group">
-                <label for="orderResults" class="label col-form-label">@T["Sort by"]</label>
+                <label for="orderResults" class="label col-form-label">@T["排序"]</label>
             </div>
             <div class="col-md-4 col-xl-3 form-group">
                 <select id="orderResults" class="form-control" name="Options.OrderBy" asp-items="@contentSorts"></select>
             </div>
             <div class="col-md-2 col-xl-1 form-group">
-                <button type="submit" class="btn btn-primary" name="submit.Filter">@T["Apply"]</button>
+                <button type="submit" class="btn btn-primary" name="submit.Filter">@T["应用"]</button>
             </div>
         </div>
     </fieldset>
@@ -116,7 +116,7 @@ new SelectListItem() { Text = T["title"].Value, Value = ContentsOrder.Title.ToSt
     else
     {
         <div class="alert alert-info">
-            @T["No result found."]
+            @T["没有找到相关内容。"]
         </div>
     }
 

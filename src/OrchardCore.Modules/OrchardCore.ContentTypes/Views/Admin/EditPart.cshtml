@@ -8,7 +8,7 @@
         .OrderBy(x => x.Order)
         .Select(x => x.Field);
 }
-<h1>@RenderTitleSegments(T["Edit Content Part - {0}", Model.DisplayName])</h1>
+<h1>@RenderTitleSegments(T["编辑内容部件 - {0}", Model.DisplayName])</h1>
 
 <form asp-action="EditPart">
     @Html.ValidationSummary()
@@ -24,7 +24,7 @@
     @await DisplayAsync(Model.Editor)
 
     <fieldset class="form-group">
-        <h3>@T["Fields"]</h3>
+        <h3>@T["部件字段"]</h3>
 
         @if (Model.PartDefinition != null)
         {
@@ -34,8 +34,8 @@
                     <li class="list-group-item">
                         <div class="properties">
                             <div class="related">
-                                <a asp-route-action="EditField" asp-route-id="@Model.PartDefinition.Name" asp-route-name="@field.Name" class="btn btn-primary btn-sm" role="button">@T["Edit"]</a>
-                                <a asp-route-action="RemoveFieldFrom" asp-route-id="@Model.PartDefinition.Name" asp-route-name="@field.Name" class="btn btn-danger btn-sm" role="button" itemprop="UnsafeUrl RemoveUrl">@T["Remove"]</a>
+                                <a asp-route-action="EditField" asp-route-id="@Model.PartDefinition.Name" asp-route-name="@field.Name" class="btn btn-primary btn-sm" role="button">@T["编辑"]</a>
+                                <a asp-route-action="RemoveFieldFrom" asp-route-id="@Model.PartDefinition.Name" asp-route-name="@field.Name" class="btn btn-danger btn-sm" role="button" itemprop="UnsafeUrl RemoveUrl">@T["移除"]</a>
                             </div>
                             @field.DisplayName() <span class="hint">@T["— {0}", field.FieldDefinition.Name.CamelFriendly()]</span>
                         </div>
@@ -46,12 +46,12 @@
         }
     </fieldset>
     <fieldset class="form-group">
-        <a asp-route-action="AddFieldTo" asp-route-id="@Model.PartDefinition.Name" class="btn btn-info btn-sm" role="button">@T["Add Field"]</a>
+        <a asp-route-action="AddFieldTo" asp-route-id="@Model.PartDefinition.Name" class="btn btn-info btn-sm" role="button">@T["添加字段"]</a>
     </fieldset>
 
     <fieldset class="form-group">
-        <button class="btn btn-primary" type="submit" name="submit.Save" value="Save">@T["Save"]</button>
-        <button class="btn btn-danger" type="submit" name="submit.Delete" value="Delete" itemprop="RemoveUrl">@T["Delete"]</button>
+        <button class="btn btn-primary" type="submit" name="submit.Save" value="Save">@T["保存"]</button>
+        <button class="btn btn-danger" type="submit" name="submit.Delete" value="Delete" itemprop="RemoveUrl">@T["删除"]</button>
     </fieldset>
 </form>
 

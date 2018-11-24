@@ -35,9 +35,9 @@ namespace OrchardCore.Contents
 
             var contentTypeDefinitions = _contentDefinitionManager.ListTypeDefinitions().OrderBy(d => d.Name);
 
-            builder.Add(T["Content"], "1.4", content => content
+            builder.Add(T["内容管理"], "1.4", content => content
                 .AddClass("content").Id("content")
-                .Add(T["Content Items"], "1", contentItems => contentItems
+                .Add(T["内容项目"], "1", contentItems => contentItems
                     .Permission(Permissions.EditOwnContent)
                     .Action("List", "Admin", new { area = "OrchardCore.Contents" })
                     .LocalNav())
@@ -63,9 +63,6 @@ namespace OrchardCore.Contents
                                 );
                     }
                 });
-
-
-
             }
 
             return Task.CompletedTask;

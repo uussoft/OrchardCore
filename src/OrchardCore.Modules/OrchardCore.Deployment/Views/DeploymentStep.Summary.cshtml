@@ -6,14 +6,14 @@
            asp-controller="Step" 
            asp-route-id="@Model.DeploymentPlanId" 
            asp-route-stepId="@Model.DeploymentStep.Id" 
-           class="btn btn-primary btn-sm">@T["Edit"]</a>
+           class="btn btn-primary btn-sm">@T["编辑"]</a>
 
         <a asp-action="Delete" 
            asp-controller="Step" 
            asp-route-id="@Model.DeploymentPlanId" 
            asp-route-stepId="@Model.DeploymentStep.Id" 
            class="btn btn-danger btn-sm" 
-           itemprop="RemoveUrl UnsafeUrl">@T["Delete"]</a>
+           itemprop="RemoveUrl UnsafeUrl">@T["删除"]</a>
     </div>
 
     @await DisplayAsync(Model.Content)

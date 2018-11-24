@@ -62,7 +62,7 @@ namespace OrchardCore.Settings.Drivers
                 // We always reset the tenant for the default culture and also supported cultures to take effect
                 await _shellHost.ReloadShellContextAsync(_shellSettings);
 
-                _notifier.Warning(H["The site has been restarted for the settings to take effect"]);
+                _notifier.Warning(H["网站已重新启动，设置已生效"]);
             }
 
             return Edit(site);

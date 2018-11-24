@@ -163,7 +163,7 @@ namespace OrchardCore.Themes.Controllers
                         _notifier.Success(T["{0} was enabled", feature.Name ?? feature.Id]);
                     }
 
-                    _notifier.Success(T["{0} was set as the default {1} theme", feature.Name ?? feature.Id, isAdmin ? "Admin" : "Site"]);
+                    _notifier.Success(T["{0}被设置为默认{1}主题", feature.Name ?? feature.Id, isAdmin ? "后台管理" : "站点"]);
                 }
             }
 
@@ -217,7 +217,7 @@ namespace OrchardCore.Themes.Controllers
 
             await _shellFeaturesManager.DisableFeaturesAsync(new[] { feature }, force: true);
 
-            _notifier.Success(T["{0} was disabled", feature.Name ?? feature.Id]);
+            _notifier.Success(T["{0} 主题被禁用", feature.Name ?? feature.Id]);
 
             return RedirectToAction("Index");
         }
@@ -239,7 +239,7 @@ namespace OrchardCore.Themes.Controllers
 
             await _shellFeaturesManager.EnableFeaturesAsync(new[] { feature }, force: true);
 
-            _notifier.Success(T["{0} was enabled", feature.Name ?? feature.Id]);
+            _notifier.Success(T["{0} 主题被启用", feature.Name ?? feature.Id]);
 
             return RedirectToAction("Index");
         }

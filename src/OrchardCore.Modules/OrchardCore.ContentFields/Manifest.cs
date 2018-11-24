@@ -7,5 +7,5 @@ using OrchardCore.Modules.Manifest;
     Version = "2.0.0",
     Description = "Content Fields module adds common content fields to be used with your custom types.",
     Dependencies = new [] { "OrchardCore.ContentTypes" },
-    Category = "Content Management"
+    Category = "内容管理"
 )]

@@ -20,7 +20,7 @@
 
 @*TODO: Only display Content field when appropriate for the selected HTTP status code.*@
 <fieldset class="form-group" asp-validation-class-for="Content">
-    <label asp-for="Content">@T["Content"] <span asp-validation-for="Content"></span></label>
+    <label asp-for="Content">@T["内容管理"] <span asp-validation-for="Content"></span></label>
     <textarea asp-for="Content"></textarea>
     <span class="hint">@T["The body to send back. With Liquid support."]</span>
 </fieldset>

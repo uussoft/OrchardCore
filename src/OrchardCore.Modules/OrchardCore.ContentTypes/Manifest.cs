@@ -7,5 +7,5 @@ using OrchardCore.Modules.Manifest;
     Version = "2.0.0",
     Description = "Content Types modules enables the creation and alteration of content types not based on code.",
     Dependencies = new [] { "OrchardCore.Contents" },
-    Category = "Content Management"
+    Category = "内容管理"
 )]

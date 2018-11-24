@@ -11,7 +11,7 @@ using OrchardCore.Modules.Manifest;
     Id = "OrchardCore.XmlRpc",
     Name = "XML-RPC",
     Description = "The XML-RPC module enables creation of contents from client applications such as Open Live Writer.",
-    Category = "Infrastructure"
+    Category = "基础设施"
 )]
 
 [assembly: Feature(
@@ -19,5 +19,5 @@ using OrchardCore.Modules.Manifest;
     Name = "Remote Publishing",
     Description = "The remote publishing feature enables creation of contents from client applications such as Open Live Writer.",
     Dependencies = new [] { "OrchardCore.XmlRpc" },
-    Category = "Infrastructure"
+    Category = "基础设施"
 )]

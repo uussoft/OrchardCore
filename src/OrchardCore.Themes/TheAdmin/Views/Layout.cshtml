@@ -46,7 +46,7 @@
                     </li>
                 </ul>
                 <form asp-route-area="OrchardCore.Users" asp-controller="Account" asp-action="LogOff" method="post" class="form-inline">
-                    <button type="submit" class="btn btn-link nav-link" role="button"><i class="fa fa-sign-out" aria-hidden="true"></i> @T["Log off"]</button>
+                    <button type="submit" class="btn btn-link nav-link" role="button"><i class="fa fa-sign-out" aria-hidden="true"></i> @T["退出"]</button>
                 </form>
             </div>
         </div>
@@ -65,7 +65,7 @@
 
     @await RenderSectionAsync("Footer", required: false)
 
-    <div id="confirmRemoveMessage" data-value="@T["Are you sure you want to remove this element?"]"></div>
+    <div id="confirmRemoveMessage" data-value="@T["你确定要删除此元素吗？"]"></div>
 
     <resources type="Footer" />    
 </body>

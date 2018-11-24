@@ -48,9 +48,9 @@ namespace OrchardCore.Modules
                 if (isApplication)
                 {
                     ModuleInfo.Name = Application.ModuleName;
-                    ModuleInfo.Description = "Provides core features defined at the application level";
+                    ModuleInfo.Description = "提供应用程序级别的核心功能";
                     ModuleInfo.Priority = int.MinValue.ToString();
-                    ModuleInfo.Category = "Application";
+                    ModuleInfo.Category = "核心应用程序";
                     ModuleInfo.DefaultTenantOnly = true;
 
                     if (features.Any())

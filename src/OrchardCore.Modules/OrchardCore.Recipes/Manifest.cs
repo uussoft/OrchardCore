@@ -11,5 +11,5 @@ using OrchardCore.Modules.Manifest;
         "OrchardCore.Features",
         "OrchardCore.Scripting"
     },
-    Category = "Infrastructure"
+    Category = "基础设施"
 )]

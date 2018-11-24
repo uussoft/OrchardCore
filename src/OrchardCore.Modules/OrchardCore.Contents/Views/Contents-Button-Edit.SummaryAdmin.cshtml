@@ -1,4 +1,4 @@
-﻿@using OrchardCore.ContentManagement
+@using OrchardCore.ContentManagement
 @inject IContentManager ContentManager
 
 @{
@@ -6,10 +6,10 @@
     var hasPublished = await ContentManager.HasPublishedVersionAsync(contentItem);
 }
 
-<a edit-for="@contentItem" asp-route-returnUrl="@FullRequestPath" class="btn btn-primary btn-sm">@T["Edit"]</a>
+<a edit-for="@contentItem" asp-route-returnUrl="@FullRequestPath" class="btn btn-primary btn-sm">@T["编辑"]</a>
 
 
 @if (hasPublished)
 {
-    <a display-for="@contentItem" class="btn btn-success btn-sm" itemprop="">@T["View"]</a>
+    <a display-for="@contentItem" class="btn btn-success btn-sm" itemprop="">@T["查看"]</a>
 }

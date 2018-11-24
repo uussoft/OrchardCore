@@ -24,7 +24,7 @@ namespace OrchardCore.Contents.Workflows.Activities
         protected IContentManager ContentManager { get; }
         protected IWorkflowScriptEvaluator ScriptEvaluator { get; }
         protected IStringLocalizer T { get; }
-        public override LocalizedString Category => T["Content"];
+        public override LocalizedString Category => T["内容管理"];
 
         /// <summary>
         /// An expression that evaluates to an <see cref="IContent"/> item.

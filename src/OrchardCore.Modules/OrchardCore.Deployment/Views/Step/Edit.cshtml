@@ -1,4 +1,4 @@
-﻿@model EditDeploymentPlanStepViewModel
+@model EditDeploymentPlanStepViewModel
 
 <h1>@RenderTitleSegments(T["Edit Step"])</h1>
 
@@ -12,14 +12,14 @@
 
     <fieldset>
         <div class="form-group">
-            <button class="btn btn-primary" type="submit">@T["Save"]</button>
+            <button class="btn btn-primary" type="submit">@T["保存"]</button>
 
             <a asp-action="Delete"
                asp-controller="Step"
                asp-route-id="@Model.DeploymentPlanId"
                asp-route-stepId="@Model.DeploymentStepId"
                class="btn btn-danger"
-               itemprop="RemoveUrl UnsafeUrl">@T["Delete"]</a>
+               itemprop="RemoveUrl UnsafeUrl">@T["删除"]</a>
 
             <a class="btn btn-secondary" 
                asp-route-action="Display" 

@@ -22,7 +22,7 @@ namespace OrchardCore.Deployment
             }
 
             builder
-                .Add(T["Configuration"], content => content
+                .Add(T["配置管理"], content => content
                     .Add(T["Import/Export"], "10", import => import
                         .Add(T["Deployment Plans"], "5", deployment => deployment
                             .Action("Index", "DeploymentPlan", new { area = "OrchardCore.Deployment" })

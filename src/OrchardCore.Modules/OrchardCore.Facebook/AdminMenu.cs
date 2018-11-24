@@ -26,7 +26,7 @@ namespace OrchardCore.Facebook
         {
             if (String.Equals(name, "admin", StringComparison.OrdinalIgnoreCase))
             {
-                builder.Add(T["Configuration"], "15", category =>
+                builder.Add(T["配置管理"], "15", category =>
                     category.Add(T["Facebook"], "1", settings =>
                         settings.AddClass("facebook").Id("facebook")
                                 .Add(T["Application"], "1", client => client
@@ -58,7 +58,7 @@ namespace OrchardCore.Facebook
         {
             if (String.Equals(name, "admin", StringComparison.OrdinalIgnoreCase))
             {
-                builder.Add(T["Configuration"], "15", category =>
+                builder.Add(T["配置管理"], "15", category =>
                     category.Add(T["Facebook"], "1", settings =>
                         settings.AddClass("facebook").Id("facebook")
                                 .Add(T["Login"], "2", client => client

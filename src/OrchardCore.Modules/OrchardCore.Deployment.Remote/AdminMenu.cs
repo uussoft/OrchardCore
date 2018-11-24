@@ -22,7 +22,7 @@ namespace OrchardCore.Deployment.Remote
             }
 
             builder
-                .Add(T["Configuration"], content => content
+                .Add(T["配置管理"], content => content
                     .Add(T["Import/Export"], import => import
                         .Add(T["Remote Instances"], "5.1", remote => remote
                             .Action("Index", "RemoteInstance", new { area = "OrchardCore.Deployment.Remote" })

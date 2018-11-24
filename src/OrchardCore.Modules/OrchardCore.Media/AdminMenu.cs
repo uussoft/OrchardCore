@@ -9,10 +9,10 @@ namespace OrchardCore.Media
     {
         public AdminMenu(IStringLocalizer<AdminMenu> localizer)
         {
-            S = localizer;
+            T = localizer;
         }
 
-        public IStringLocalizer S { get; set; }
+        public IStringLocalizer T { get; set; }
 
         public Task BuildNavigationAsync(string name, NavigationBuilder builder)
         {
@@ -22,8 +22,8 @@ namespace OrchardCore.Media
             }
 
             builder
-                .Add(S["Content"], content => content
-                    .Add(S["Assets"], "3", layers => layers
+                .Add(T["内容管理"], content => content
+                    .Add(T["资源管理"], "3", layers => layers
                         .Permission(Permissions.ManageOwnMedia)
                         .Action("Index", "Admin", new { area = "OrchardCore.Media" })
                         .LocalNav()

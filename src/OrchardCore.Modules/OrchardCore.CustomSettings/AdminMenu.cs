@@ -30,8 +30,8 @@ namespace OrchardCore.CustomSettings
             foreach (var type in _customSettingsService.GetAllSettingsTypes())
             {
                 builder
-                    .Add(T["Configuration"], configuration => configuration
-                        .Add(T["Settings"], settings => settings
+                    .Add(T["配置管理"], configuration => configuration
+                        .Add(T["设置"], settings => settings
                             .Add(new LocalizedString(type.DisplayName, type.DisplayName), layers => layers
                                 .Action("Index", "Admin", new { area = "OrchardCore.Settings", groupId = type.Name })
                                 .Permission(Permissions.CreatePermissionForType(type))

@@ -38,7 +38,7 @@ namespace OrchardCore.OpenId
                     features.Contains(OpenIdConstants.Features.Server) ||
                     features.Contains(OpenIdConstants.Features.Validation))
                 {
-                    category.Add(T["Settings"], "1", settings =>
+                    category.Add(T["设置"], "1", settings =>
                     {
                         if (features.Contains(OpenIdConstants.Features.Client))
                         {

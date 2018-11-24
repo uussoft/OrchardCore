@@ -12,7 +12,7 @@ using OrchardCore.Modules.Manifest;
     Name = "Queries",
     Description = "Provides querying capabilities.",
     Dependencies = new [] { "OrchardCore.Liquid" },
-    Category = "Content Management"
+    Category = "内容管理"
 )]
 
 [assembly: Feature(
@@ -20,5 +20,5 @@ using OrchardCore.Modules.Manifest;
     Name = "SQL Queries",
     Description = "Introduces a way to create custom Queries in pure SQL.",
     Dependencies = new [] { "OrchardCore.Queries" },
-    Category = "Content Management"
+    Category = "内容管理"
 )]

@@ -14,10 +14,10 @@ namespace OrchardCore.AdminTrees
             IStringLocalizer<AdminMenu> localizer)
         {
             _adminTreeNavigationProvider = adminTreeNavigationProvider;
-            S = localizer;
+            T = localizer;
         }
 
-        public IStringLocalizer S { get; set; }
+        public IStringLocalizer T { get; set; }
 
         public async Task BuildNavigationAsync(string name, NavigationBuilder builder)
         {
@@ -27,8 +27,8 @@ namespace OrchardCore.AdminTrees
             }
 
             // Configuration and settings menus for the AdminTree module
-            builder.Add(S["Configuration"], cfg => cfg
-                    .Add(S["Admin Trees"], "1.5", admt => admt
+            builder.Add(T["配置管理"], cfg => cfg
+                    .Add(T["Admin Trees"], "1.5", admt => admt
                         .Permission(Permissions.ManageAdminTree)
                         .Action("List", "Tree", new { area = "OrchardCore.AdminTrees" })
                         .LocalNav()

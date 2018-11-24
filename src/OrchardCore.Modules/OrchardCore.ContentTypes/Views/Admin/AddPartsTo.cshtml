@@ -2,9 +2,9 @@
 @{
     int i = 0;
 }
-<h1>@T["Add Parts To \"{0}\"", Model.Type.DisplayName]</h1>
+<h1>@T["将部件添加到 \"{0}\"", Model.Type.DisplayName]</h1>
 
-@T["Choose the Parts to add to this Content Type."]
+@T["选择要添加到此内容类型的部件。"]
 
 <form asp-action="AddPartsTo">
     @Html.ValidationSummary()
@@ -26,7 +26,7 @@
         </ul>
     </fieldset>
     <fieldset class="form-group">
-        <button class="btn btn-primary" type="submit">@T["Save"]</button>
-        <a asp-route-action="Edit" asp-route-id="@Model.Type.Name" class="btn btn-secondary">@T["Cancel"]</a>
+        <button class="btn btn-primary" type="submit">@T["保存"]</button>
+        <a asp-route-action="Edit" asp-route-id="@Model.Type.Name" class="btn btn-secondary">@T["取消"]</a>
     </fieldset>
 </form>

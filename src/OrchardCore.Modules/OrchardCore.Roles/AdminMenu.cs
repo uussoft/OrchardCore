@@ -22,9 +22,9 @@ namespace OrchardCore.Roles
             }
 
             builder
-                .Add(T["Configuration"], configuration => configuration
-                    .Add(T["Security"], "5", security => security
-                        .Add(T["Roles"], "10", installed => installed
+                .Add(T["配置管理"], configuration => configuration
+                    .Add(T["用户和角色"], "5", security => security
+                        .Add(T["角色管理"], "10", installed => installed
                             .Action("Index", "Admin", "OrchardCore.Roles")
                             .Permission(Permissions.ManageRoles)
                             .LocalNav()

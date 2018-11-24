@@ -7,5 +7,5 @@ using OrchardCore.Modules.Manifest;
     Version = "2.0.0",
     Description = "The Html module enables content items to have Html bodies.",
     Dependencies = new [] { "OrchardCore.ContentTypes" },
-    Category = "Content Management"
+    Category = "内容管理"
 )]

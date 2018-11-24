@@ -42,7 +42,7 @@ namespace OrchardCore.Users.Workflows.Activities
         public override string Name => nameof(RegisterUserTask);
 
         // The category to which this activity belongs. The activity picker groups activities by this category.
-        public override LocalizedString Category => T["Content"];
+        public override LocalizedString Category => T["内容管理"];
 
         // The message to display.
         public bool SendConfirmationEmail

@@ -7,5 +7,5 @@ using OrchardCore.Modules.Manifest;
     Version = "2.0.0",
     Description = "Themes.",
     Dependencies = new [] { "OrchardCore.Admin" },
-    Category = "Theming"
+    Category = "主题"
 )]

@@ -16,7 +16,7 @@ namespace OrchardCore.Contents.Workflows.Activities
         }
 
         public override string Name => nameof(UnpublishContentTask);
-        public override LocalizedString Category => T["Content"];
+        public override LocalizedString Category => T["内容管理"];
 
         public override IEnumerable<Outcome> GetPossibleOutcomes(WorkflowExecutionContext workflowContext, ActivityContext activityContext)
         {

@@ -23,8 +23,8 @@ namespace OrchardCore.Layers
             }
 
             builder
-                .Add(T["Configuration"], configuration => configuration
-                    .Add(T["Settings"], settings => settings
+                .Add(T["配置管理"], configuration => configuration
+                    .Add(T["设置"], settings => settings
                         .Add(T["Layers"], T["Layers"], layers => layers
                             .Action("Index", "Admin", new { area = "OrchardCore.Settings", groupId = LayerSiteSettingsDisplayDriver.GroupId })
                             .Permission(Permissions.ManageLayers)

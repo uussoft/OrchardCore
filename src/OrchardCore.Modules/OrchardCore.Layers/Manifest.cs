@@ -15,5 +15,5 @@ using OrchardCore.Modules.Manifest;
         "OrchardCore.Widgets",
         "OrchardCore.Scripting"
     },
-    Category = "Content"
+    Category = "内容管理"
 )]

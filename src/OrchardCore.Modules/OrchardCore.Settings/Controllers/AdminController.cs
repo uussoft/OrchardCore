@@ -86,7 +86,7 @@ namespace OrchardCore.Settings.Controllers
             {
                 await _siteService.UpdateSiteSettingsAsync(site);
 
-                _notifier.Success(H["Site settings updated successfully."]);
+                _notifier.Success(H["网站设置已成功更新"]);
 
                 return RedirectToAction(nameof(Index), new { groupId });
             }
@@ -132,11 +132,11 @@ namespace OrchardCore.Settings.Controllers
                 siteSettings.SupportedCultures = siteSettings.SupportedCultures.Union(new[] { cultureName }, StringComparer.OrdinalIgnoreCase).ToArray();
                 await _siteService.UpdateSiteSettingsAsync(siteSettings);
 
-                _notifier.Warning(H["The site needs to be restarted for the settings to take effect"]);
+                _notifier.Warning(H["网站已重新启动，设置已生效"]);
             }
             else
             {
-                ModelState.AddModelError(nameof(cultureName), S["Invalid culture name"]);
+                ModelState.AddModelError(nameof(cultureName), S["无效的语言文化名称"]);
             }
 
             return RedirectToAction("Culture");

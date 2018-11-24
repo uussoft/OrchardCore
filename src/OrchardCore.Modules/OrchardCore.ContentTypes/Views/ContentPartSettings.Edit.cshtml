@@ -3,18 +3,18 @@
 
 <fieldset class="form-group">
     <div class="row col-md ">
-        <label asp-for="DisplayName" >@T["Display Name"]</label>
+        <label asp-for="DisplayName" >@T["显示名称"]</label>
         <input asp-for="DisplayName" class="form-control" placeholder="@Model.ContentPartDefinition.DisplayName()" />
-        <span class="hint">@T["Name of the part as it will be displayed in screens. Leave empty to use defaults."]</span>
+        <span class="hint">@T["屏幕中显示的部件名称，留空则显示默认值。"]</span>
     </div>
 </fieldset>
 
 <fieldset class="form-group">
     <div class="row col-lg ">
-        <label asp-for="Description">@T["Description"]</label>
+        <label asp-for="Description">@T["部件描述"]</label>
         @Html.ValidationMessageFor(m => m.Description)
         <input asp-for="Description" class="form-control" />
-        <span class="hint">@T["Optionally provide a description for this part."]</span>
+        <span class="hint">@T["（可选）部件的相关描述。"]</span>
     </div>
 </fieldset>
 
@@ -22,7 +22,7 @@
     <div class="custom-control custom-checkbox">
         <input type="checkbox" class="custom-control-input" asp-for="Attachable">
         <label class="custom-control-label" asp-for="Attachable">@T["Attachable"]</label>
-        <span class="hint">@T["Check to allow this part to be attached to other content types."]</span>
+        <span class="hint">@T["— {0}", "是否允许将此部件附加到其他内容类型。"]</span>
     </div>
 </fieldset>
 
@@ -30,6 +30,6 @@
     <div class="custom-control custom-checkbox">
         <input type="checkbox" class="custom-control-input" asp-for="Reusable">
         <label class="custom-control-label" asp-for="Reusable">@T["Reusable"]</label>
-        <span class="hint">@T["Check to allow this part to be attached multiple times."]</span>
+        <span class="hint">@T["— {0}", "是否允许此部件附加多次。"]</span>
     </div>
 </fieldset>

@@ -16,7 +16,7 @@ using OrchardCore.Modules.Manifest;
         "OrchardCore.Settings",
         "OrchardCore.Liquid"
     },
-    Category = "Content Management"
+    Category = "内容管理"
 )]
 
 [assembly:Feature(
@@ -24,5 +24,5 @@ using OrchardCore.Modules.Manifest;
     Name = "File Content Definition",
     Description = "Stores Content Definition in a local file.",
     Dependencies = new[] { "OrchardCore.Contents" },
-    Category = "Content Management"
+    Category = "内容管理"
 )]

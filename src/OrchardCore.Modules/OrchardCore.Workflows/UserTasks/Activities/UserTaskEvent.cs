@@ -17,7 +17,7 @@ namespace OrchardCore.Workflows.UserTasks.Activities
         private IStringLocalizer T { get; }
 
         public override string Name => nameof(UserTaskEvent);
-        public override LocalizedString Category => T["Content"];
+        public override LocalizedString Category => T["内容管理"];
 
         public IList<string> Actions
         {

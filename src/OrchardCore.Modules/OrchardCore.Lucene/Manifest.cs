@@ -16,7 +16,7 @@ using OrchardCore.Modules.Manifest;
         "OrchardCore.Indexing",
         "OrchardCore.Liquid"
     },
-    Category = "Content Management"
+    Category = "内容管理"
 )]
 
 [assembly: Feature(
@@ -24,7 +24,7 @@ using OrchardCore.Modules.Manifest;
     Name = "Lucene Worker",
     Description = "Provides a background task to keep local indices in sync with other instances.",
     Dependencies = new[] { "OrchardCore.Lucene" },
-    Category = "Content Management"
+    Category = "内容管理"
 )]
 
 [assembly: Feature(
@@ -32,5 +32,5 @@ using OrchardCore.Modules.Manifest;
     Name = "Lucene Content Picker",
     Description = "Provides a Lucene content picker field editor.",
     Dependencies = new[] { "OrchardCore.Lucene", "OrchardCore.ContentFields" },
-    Category = "Content Management"
+    Category = "内容管理"
 )]

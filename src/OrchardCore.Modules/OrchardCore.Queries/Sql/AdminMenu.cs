@@ -22,7 +22,7 @@ namespace OrchardCore.Queries.Sql
             }
 
             builder
-                .Add(T["Configuration"], "10", configuration => configuration
+                .Add(T["配置管理"], "10", configuration => configuration
                     .AddClass("menu-configuration").Id("configuration")
                     .Add(T["Site"], "10", site => site
                         .Add(T["SQL Queries"], "5", queries => queries

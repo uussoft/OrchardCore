@@ -1,15 +1,15 @@
 @model CreatePartViewModel
 
-<h1>@RenderTitleSegments(T["New Content Part"])</h1>
+<h1>@RenderTitleSegments(T["新内容部件"])</h1>
 
 <form asp-action="CreatePart">
     @Html.ValidationSummary()
     <fieldset class="form-group">
-        <label for="Name">@T["Name"]</label>
+        <label for="Name">@T["名称"]</label>
         <input asp-for="Name" class="form-control w-md-25" autofocus="autofocus"/>
-        <span class="hint">@T["Use no spaces or special characters. For example, \"MyCustomPart\""]</span>
+        <span class="hint">@T["部件名称不能使用空格或特殊字符。例如：\"MyCustomPart\""]</span>
     </fieldset>
     <fieldset class="form-group">
-        <button class="btn btn-primary" type="submit">@T["Create"]</button>
+        <button class="btn btn-primary" type="submit">@T["创建"]</button>
     </fieldset>
 </form>

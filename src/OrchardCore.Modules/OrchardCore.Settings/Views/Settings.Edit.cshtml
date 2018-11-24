@@ -3,22 +3,22 @@
 @using System.Globalization
 
 <fieldset class="form-group" asp-validation-class-for="SiteName">
-    <label asp-for="SiteName">@T["Site name"] <span asp-validation-for="SiteName"></span></label>
+    <label asp-for="SiteName">@T["站点名称"] <span asp-validation-for="SiteName"></span></label>
     <input asp-for="SiteName" class="form-control" />
-    <span class="hint">@T["The site name."]</span>
+    <span class="hint">@T["站点名称的描述，例如：学霸酷堂在线教育"]</span>
 </fieldset>
 
 <fieldset class="form-group" asp-validation-class-for="BaseUrl">
-    <label asp-for="BaseUrl">@T["Base url"] <span asp-validation-for="BaseUrl"></span></label>
+    <label asp-for="BaseUrl">@T["站点域名"] <span asp-validation-for="BaseUrl"></span></label>
     <input asp-for="BaseUrl" class="form-control" />
-    <span class="hint">@T["Enter the fully qualified base URL of the web site."]</span>
+    <span class="hint">@T["站点域名，例如：www.xuebakutang.com"]</span>
 </fieldset>
 
 <div class="row">
     <fieldset class="form-group col-lg-6" asp-validation-class-for="TimeZone">
-        <label asp-for="TimeZone">@T["Default Time Zone"] <span asp-validation-for="TimeZone"></span></label>
+        <label asp-for="TimeZone">@T["默认时区"] <span asp-validation-for="TimeZone"></span></label>
         <select asp-for="TimeZone" class="form-control">
-            <option value="">@T["Local to server"]</option>
+            <option value="">@T["本地服务器"]</option>
             @foreach (var timezone in Clock.GetTimeZones())
             {
                 <option value="@timezone.TimeZoneId" selected="@(Model.TimeZone == timezone.TimeZoneId)">
@@ -26,11 +26,11 @@
                 </option>
             }
         </select>
-        <span class="hint">@T["Determines the default time zone used when displaying and editing dates and times."]</span>
+        <span class="hint">@T["确定显示和编辑日期和时间时使用的默认时区"]</span>
     </fieldset>
 
     <fieldset class="form-group col-lg-6" asp-validation-class-for="Culture">
-        <label asp-for="Culture">@T["Default Culture"] <span asp-validation-for="Culture"></span></label>
+        <label asp-for="Culture">@T["默认语言文化"] <span asp-validation-for="Culture"></span></label>
         <select asp-for="Culture" class="form-control">
             <option value="">@T["System ({0} | {1})", CultureInfo.InstalledUICulture.Name, CultureInfo.InstalledUICulture.DisplayName]</option>
             @foreach (var culture in Model.SiteCultures)
@@ -40,7 +40,7 @@
                 </option>
             }
         </select>
-        <span class="hint">@T["Determines the default culture used"]</span>
-        <p>@Html.ActionLink(T["Add or remove supported cultures for the site"].Value, "Culture")</p>
+        <span class="hint">@T["当前站点使用的语言文化"]</span>
+        <p>@Html.ActionLink(T["添加或者删除站点支持的语言文化"].Value, "Culture")</p>
     </fieldset>
 </div>

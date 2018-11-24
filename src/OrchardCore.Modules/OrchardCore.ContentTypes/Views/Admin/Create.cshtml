@@ -1,24 +1,24 @@
 @model CreateTypeViewModel
 
-<h1>@RenderTitleSegments(T["New Content Type"])</h1>
+<h1>@RenderTitleSegments(T["新内容类型"])</h1>
 
 <form asp-action="Create">
     @Html.ValidationSummary()
 
     <fieldset class="form-group">
-        <label asp-for="DisplayName">@T["Display Name"]</label>
+        <label asp-for="DisplayName">@T["显示名称"]</label>
         <input asp-for="DisplayName" class="form-control w-md-25" autofocus />
-        <span class="hint">@T["Name of the type as it will be displayed on screens."]</span>
+        <span class="hint">@T["屏幕显示的类型名称"]</span>
     </fieldset>
 
     <fieldset class="form-group">
-        <label asp-for="Name">@T["Technical Name"]</label>
+        <label asp-for="Name">@T["技术名称"]</label>
         <input asp-for="Name" class="form-control w-md-25" />
-        <span class="hint">@T["Technical name of the type."]</span>
+        <span class="hint">@T["类型的技术名称"]</span>
     </fieldset>
 
     <fieldset class="form-group">
-        <button class="btn btn-primary" type="submit">@T["Create"]</button>
+        <button class="btn btn-primary" type="submit">@T["创建"]</button>
     </fieldset>
 </form>
 

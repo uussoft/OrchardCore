@@ -918,7 +918,7 @@
               },
               {
                 "$type": "OrchardCore.AdminTrees.AdminNodes.PlaceholderAdminNode, OrchardCore.AdminTrees",
-                "LinkText": "Content",
+                "LinkText": "内容管理",
                 "IconClass": null,
                 "UniqueId": "3e590d44f8704e4588e272dd966ce291",
                 "Enabled": true,
@@ -934,7 +934,7 @@
                 "Items": [
                   {
                     "$type": "OrchardCore.AdminTrees.AdminNodes.PlaceholderAdminNode, OrchardCore.AdminTrees",
-                    "LinkText": "Content Items",
+                    "LinkText": "内容项目",
                     "IconClass": null,
                     "UniqueId": "2f1fc33133334a1abf7d1a0516ee8b4e",
                     "Enabled": true,

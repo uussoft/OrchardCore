@@ -22,9 +22,9 @@ namespace OrchardCore.Features
             }
 
             builder
-                .Add(T["Configuration"], "10", configuration => configuration
+                .Add(T["配置管理"], "10", configuration => configuration
                     .AddClass("menu-configuration").Id("configuration")
-                    .Add(T["Modules"], "6", deployment => deployment
+                    .Add(T["模块管理"], "6", deployment => deployment
                         .Action("Features", "Admin", new { area = "OrchardCore.Features" })
                         .Permission(Permissions.ManageFeatures)
                         .LocalNav()

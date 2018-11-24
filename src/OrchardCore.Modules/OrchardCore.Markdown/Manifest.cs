@@ -7,5 +7,5 @@ using OrchardCore.Modules.Manifest;
     Version = "2.0.0",
     Description = "The markdown module enables content items to have markdown editors.",
     Dependencies = new [] { "OrchardCore.ContentTypes" },
-    Category = "Content Management"
+    Category = "内容管理"
 )]

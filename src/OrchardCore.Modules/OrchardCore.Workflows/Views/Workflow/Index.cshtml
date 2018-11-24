@@ -20,7 +20,7 @@
                     @T["Bulk Actions"]
                 </button>
                 <div class="dropdown-menu" aria-labelledby="bulk-actions-button">
-                    <button type="submit" name="BulkAction" value="@WorkflowBulkAction.Delete" form="workflows-form" class="dropdown-item"> @T["Delete"]</a>
+                    <button type="submit" name="BulkAction" value="@WorkflowBulkAction.Delete" form="workflows-form" class="dropdown-item"> @T["删除"]</a>
                 </div>
             </div>
         </li>
@@ -64,7 +64,7 @@
                     <li class="list-group-item">
                         <div class="properties">
                             <div class="related">
-                                <a asp-action="Delete" asp-route-id="@entry.Workflow.Id" class="btn btn-danger btn-sm" itemprop="RemoveUrl UnsafeUrl">@T["Delete"]</a>
+                                <a asp-action="Delete" asp-route-id="@entry.Workflow.Id" class="btn btn-danger btn-sm" itemprop="RemoveUrl UnsafeUrl">@T["删除"]</a>
                             </div>
 
                             <div class="custom-control custom-checkbox float-left">
@@ -95,5 +95,5 @@
 </div>
 
 <div class="form-group">
-    <a class="btn btn-secondary" href="@Model.ReturnUrl">@T["Back"]</a>
+    <a class="btn btn-secondary" href="@Model.ReturnUrl">@T["返回"]</a>
 </div>

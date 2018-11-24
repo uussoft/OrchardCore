@@ -9,7 +9,7 @@
     //    { LifecycleStatus.Deprecated, "fa-exclamation-circle" }
     //};
 }
-<h1>@RenderTitleSegments(T["Features"])</h1>
+<h1>@RenderTitleSegments(T["功能模块"])</h1>
 
 <nav class="admin-toolbar">
     <div class="nav justify-content-end">
@@ -41,7 +41,7 @@
         *@
 
         <form class="form-inline float-right" autocomplete="off" method="get">
-            <input id="search-box" class="form-control" type="text" placeholder="@T["Search"]" autofocus="autofocus">
+            <input id="search-box" class="form-control" type="text" placeholder="@T["搜索模块..."]" autofocus="autofocus">
         </form>
     </div>
 </nav>
@@ -131,17 +131,17 @@
                                     <div class="col-md-2 text-right">
                                         @if (showEnable && !feature.IsEnabled)
                                         {
-                                            <a asp-action="Enable" asp-route-id="@feature.Descriptor.Id" class="btn btn-primary btn-sm" itemprop="UnsafeUrl">@T["Enable"]</a>
+                                            <a asp-action="Enable" asp-route-id="@feature.Descriptor.Id" class="btn btn-primary btn-sm" itemprop="UnsafeUrl">@T["启用"]</a>
                                         }
                                         @if (showDisable && feature.IsEnabled)
                                         {
-                                            var confirmationMessage = T["Are you sure you want to disable this feature? Continue?"];
+                                            var confirmationMessage = T["你确定禁用此项功能？"];
                                             if (feature.DependentFeatures.Any())
                                             {
                                                 var dependentFeatures = new HtmlString(String.Join(" ", feature.DependentFeatures.Select(f => f.Name)));
-                                                confirmationMessage = T["Disabling this feature will also disable the following dependent features: {0}. Continue?", dependentFeatures];
+                                                confirmationMessage = T["禁用此项功能的同时会禁用如下依赖功能：{0}", dependentFeatures];
                                             }
-                                            <a asp-action="Disable" asp-route-id="@feature.Descriptor.Id" class="btn btn-danger btn-sm" data-message="@confirmationMessage" itemprop="UnsafeUrl RemoveUrl">@T["Disable"]</a>
+                                            <a asp-action="Disable" asp-route-id="@feature.Descriptor.Id" class="btn btn-danger btn-sm" data-message="@confirmationMessage" itemprop="UnsafeUrl RemoveUrl">@T["禁用"]</a>
                                         }
                                     </div>
                                 </div>

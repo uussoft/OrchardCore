@@ -11,7 +11,7 @@ using OrchardCore.Modules.Manifest;
     Id = "OrchardCore.Users",
     Name = "Users",
     Description = "The users module enables authentication UI and user management.",
-    Category = "Security"
+    Category = "安全"
 )]
 
 [assembly: Feature(
@@ -19,7 +19,7 @@ using OrchardCore.Modules.Manifest;
     Name = "Users Registration",
     Description = "The registration feature allows external users to sign up to the site and ask to confirm their email.",
     Dependencies = new[] { "OrchardCore.Users", "OrchardCore.Email" },
-    Category = "Security"
+    Category = "安全"
 )]
 
 [assembly: Feature(
@@ -27,7 +27,7 @@ using OrchardCore.Modules.Manifest;
     Name = "Users Reset Password",
     Description = "The reset password feature allows users to reset their password.",
     Dependencies = new[] { "OrchardCore.Users", "OrchardCore.Email" },
-    Category = "Security"
+    Category = "安全"
 )]
 
 [assembly: Feature(

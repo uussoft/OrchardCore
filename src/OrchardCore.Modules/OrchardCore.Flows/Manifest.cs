@@ -11,5 +11,5 @@ using OrchardCore.Modules.Manifest;
     Id = "OrchardCore.Flows",
     Description = "Provides a content part allowing users to edit their content based on Widgets.",
     Dependencies = new [] { "OrchardCore.Widgets" },
-    Category = "Content"
+    Category = "内容管理"
 )]

@@ -1,13 +1,13 @@
 @model OrchardCore.Themes.Models.SelectThemesViewModel
 <style asp-src="/OrchardCore.Themes/Styles/themes.admin.css"></style>
 <div class="alert alert-warning">
-    <h4>@T["Changing default themes"]</h4>
-    <p>@T["This page lets you change the site's default themes for both the front-end and the back-end."]</p>
+    <h4>@T["修改默认主题"]</h4>
+    <p>@T["修改站点的前台和后台管理主题"]</p>
 </div>
 
 @if (!Model.Themes.Any())
 {
-    <p>@T["There are no themes installed."]</p>
+    <p>@T["没有安装任何主题"]</p>
 }
 else
 {
@@ -22,13 +22,13 @@ else
                         <p>@themeEntry.Extension.Manifest.Description</p>
                         @if (!string.IsNullOrWhiteSpace(themeEntry.Extension.Manifest.Author))
                         {
-                            <small>@T["By: {0}", themeEntry.Extension.Manifest.Author]</small><br />
+                            <small>@T["主题作者： {0}", themeEntry.Extension.Manifest.Author]</small><br />
                         }
                         @if (!string.IsNullOrWhiteSpace(themeEntry.Extension.Manifest.Website))
                         {
-                            <small><a href="@themeEntry.Extension.Manifest.Website" target="_blank">@themeEntry.Extension.Manifest.Website</a></small><br />
+                            <small>@T["主题官网"]： <a href="@themeEntry.Extension.Manifest.Website" target="_blank">@themeEntry.Extension.Manifest.Website</a></small><br />
                         }
-                        <small>@T["Version: {0}", themeEntry.Extension.Manifest.Version]</small>
+                        <small>@T["主题版本： {0}", themeEntry.Extension.Manifest.Version]</small>
                     </div>
                     <div class="card-footer text-muted text-xs-right">
                         @if (!themeEntry.IsCurrent)
@@ -36,7 +36,7 @@ else
                             <div class="row">
                                 <div class="col-sm-6">
                                     <form asp-route-action="SetCurrentTheme" asp-route-id="@themeEntry.Extension.Id" method="post">
-                                        <button type="submit" class="btn btn-sm btn-primary">@T["Make Default"]</button>
+                                        <button type="submit" class="btn btn-sm btn-primary">@T["设为默认主题"]</button>
                                     </form>
                                 </div>
                                 <div class="col-sm-6">
@@ -44,13 +44,13 @@ else
                                         @if (themeEntry.Enabled)
                                         {
                                             <form asp-route-action="Disable" asp-route-id="@themeEntry.Extension.Id" method="post">
-                                                <button type="submit" class="btn btn-sm btn-default">@T["Disable"]</button>
+                                                <button type="submit" class="btn btn-sm btn-default">@T["禁用该主题"]</button>
                                             </form>
                                         }
                                         else
                                         {
                                             <form asp-route-action="Enable" asp-route-id="@themeEntry.Extension.Id" method="post">
-                                                <button type="submit" class="btn btn-sm btn-default">@T["Enable"]</button>
+                                                <button type="submit" class="btn btn-sm btn-default">@T["使用该主题"]</button>
                                             </form>
                                         }
                                     </div>
@@ -59,7 +59,7 @@ else
                         }
                         else
                         {
-                            @T["This is the default {0} theme", themeEntry.IsAdmin ? "Admin" : "Site"]
+                            @T["默认的{0}主题", themeEntry.IsAdmin ? "【后台管理】" : "【站点】"]
                         }
                     </div>
                 </div>
@@ -68,9 +68,9 @@ else
     </div>
 
     <div class="alert alert-danger">
-        <h4>@T["Reset default themes"]</h4>
-        <p>@T["The following actions reset the themes. It is used for sites that can't use theming."]</p>
-        <a asp-action="ResetSiteTheme" itemprop="UnsafeUrl RemoveUrl" data-message="@T["Are you sure you want to reset the Site theme?"]" class="btn btn-danger">@T["Reset Site Theme"]</a>
-        <a asp-action="ResetAdminTheme" itemprop="UnsafeUrl RemoveUrl" data-message="@T["Are you sure you want to reset the Admin theme?"]" class="btn btn-danger">@T["Reset Admin Theme"]</a>
+        <h4>@T["重置默认主题"]</h4>
+        <p>@T["重置主题操作，使用于不能使用主题的站点"]</p>
+        <a asp-action="ResetSiteTheme" itemprop="UnsafeUrl RemoveUrl" data-message="@T["是否确定重置站点主题？"]" class="btn btn-danger">@T["重置站点主题"]</a>
+        <a asp-action="ResetAdminTheme" itemprop="UnsafeUrl RemoveUrl" data-message="@T["是都确定重置后台管理主题？"]" class="btn btn-danger">@T["重置后台管理主题"]</a>
     </div>
 }

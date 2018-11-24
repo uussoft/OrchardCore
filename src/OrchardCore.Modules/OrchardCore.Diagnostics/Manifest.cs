@@ -6,5 +6,5 @@ using OrchardCore.Modules.Manifest;
     Website = "http://orchardproject.net",
     Version = "2.0.0",
     Description = "Provides services to handle errors.",
-    Category = "Infrastructure"
+    Category = "基础设施"
 )]

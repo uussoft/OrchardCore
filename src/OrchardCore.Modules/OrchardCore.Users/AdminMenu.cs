@@ -24,9 +24,9 @@ namespace OrchardCore.Users
             }
 
             builder
-                .Add(T["Configuration"], configuration => configuration
-                    .Add(T["Security"], "5", security => security
-                        .Add(T["Users"], "5", installed => installed
+                .Add(T["配置管理"], configuration => configuration
+                    .Add(T["用户和角色"], "5", security => security
+                        .Add(T["用户管理"], "5", installed => installed
                             .Action("Index", "Admin", "OrchardCore.Users")
                             .Permission(Permissions.ManageUsers)
                             .LocalNav()
@@ -54,8 +54,8 @@ namespace OrchardCore.Users
             }
 
             builder
-                .Add(T["Configuration"], configuration => configuration
-                    .Add(T["Settings"], settings => settings
+                .Add(T["配置管理"], configuration => configuration
+                    .Add(T["设置"], settings => settings
                         .Add(T["Registration"], T["Registration"], registration => registration
                             .Permission(Permissions.ManageUsers)
                             .Action("Index", "Admin", new { area = "OrchardCore.Settings", groupId = RegistrationSettingsDisplayDriver.GroupId })
@@ -84,8 +84,8 @@ namespace OrchardCore.Users
             }
 
             builder
-                .Add(T["Configuration"], configuration => configuration
-                    .Add(T["Settings"], settings => settings
+                .Add(T["配置管理"], configuration => configuration
+                    .Add(T["设置"], settings => settings
                         .Add(T["Reset password"], T["Reset password"], password => password
                             .Permission(Permissions.ManageUsers)
                             .Action("Index", "Admin", new { area = "OrchardCore.Settings", groupId = ResetPasswordSettingsDisplayDriver.GroupId })

@@ -9,5 +9,5 @@ using OrchardCore.Modules.Cms.Manifest;
 #if (AddPart)
     Dependencies = new[] { "OrchardCore.Contents" },
 #endif
-    Category = "Content Management"
+    Category = "内容管理"
 )]

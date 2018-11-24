@@ -21,8 +21,8 @@ namespace OrchardCore.Email
                 return Task.CompletedTask;
 
             builder
-                .Add(T["Configuration"], configuration => configuration
-                    .Add(T["Settings"], settings => settings
+                .Add(T["配置管理"], configuration => configuration
+                    .Add(T["设置"], settings => settings
                        .Add(T["Smtp"], T["Smtp"], entry => entry
                           .Action("Index", "Admin", new { area = "OrchardCore.Settings", groupId = SmtpSettingsDisplayDriver.GroupId })
                           .Permission(Permissions.ManageEmailSettings)

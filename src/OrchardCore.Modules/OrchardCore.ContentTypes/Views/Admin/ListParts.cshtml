@@ -1,15 +1,15 @@
 @model ListContentPartsViewModel
 
-<h1>@RenderTitleSegments(T["Content Parts"])</h1>
+<h1>@RenderTitleSegments(T["内容部件"])</h1>
 
 <nav class="admin-toolbar">
     <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-            <a asp-route-action="CreatePart" id="btnCreate" class="btn btn-primary" role="button">@T["Create new part"]</a>
+            <a asp-route-action="CreatePart" id="btnCreate" class="btn btn-primary" role="button">@T["创建新部件"]</a>
         </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-        <input id="search-box" class="form-control mr-sm-2" type="text" placeholder="@T["Filter"]" autofocus="autofocus">
+        <input id="search-box" class="form-control mr-sm-2" type="text" placeholder="@T["筛选器"]" autofocus="autofocus">
     </form>
 </nav>
 

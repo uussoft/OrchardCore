@@ -23,9 +23,9 @@ namespace OrchardCore.Forms
             }
 
             builder
-                .Add(T["Configuration"], configuration => configuration
-                    .Add(T["Settings"], settings => settings
-                        .Add(T["Forms"], T["Forms"], forms => forms
+                .Add(T["配置管理"], configuration => configuration
+                    .Add(T["设置"], settings => settings
+                        .Add(T["表单设计"], T["表单设计"], forms => forms
                             .Action("Index", "Admin", new { area = "OrchardCore.Settings", groupId = NoCaptchaSettingsDisplay.GroupId })
                             .LocalNav()
                         )));

@@ -6,5 +6,5 @@ using OrchardCore.Modules.Manifest;
     Website = "http://orchardproject.net",
     Version = "2.0.0",
     Description = "This module will ensure HTTPS is used when accessing the website.",
-    Category = "Security"
+    Category = "安全"
 )]

@@ -22,9 +22,9 @@ namespace OrchardCore.BackgroundTasks
             }
 
             builder
-                .Add(T["Configuration"], configuration => configuration
-                    .Add(T["Tasks"], "10", tasks => tasks
-                        .Add(T["Background Tasks"], "10", backgroundTasks => backgroundTasks
+                .Add(T["配置管理"], configuration => configuration
+                    .Add(T["任务管理"], "10", tasks => tasks
+                        .Add(T["后台任务"], "10", backgroundTasks => backgroundTasks
                             .Action("Index", "BackgroundTask", new { area = "OrchardCore.BackgroundTasks" })
                             .Permission(Permissions.ManageBackgroundTasks)
                             .LocalNav()

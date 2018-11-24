@@ -9,5 +9,5 @@ using OrchardCore.Modules.Manifest;
 
 [assembly: Feature(
     Id = "OrchardCore.HomeRoute",
-    Category = "Infrastructure"
+    Category = "基础设施"
 )]

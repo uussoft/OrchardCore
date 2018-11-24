@@ -23,7 +23,7 @@ namespace OrchardCore.Recipes
                 return Task.CompletedTask;
             }
 
-            builder.Add(T["Configuration"], configuration => configuration
+            builder.Add(T["配置管理"], configuration => configuration
                 .AddClass("recipes").Id("recipes")
                 .Add(T["Recipes"], "1", recipes => recipes
                     .Permission(StandardPermissions.SiteOwner)

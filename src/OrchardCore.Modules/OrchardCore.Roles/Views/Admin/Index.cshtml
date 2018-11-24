@@ -1,15 +1,15 @@
-﻿@model OrchardCore.Roles.ViewModels.RolesViewModel
+@model OrchardCore.Roles.ViewModels.RolesViewModel
 
-<h1>@RenderTitleSegments(T["Roles"])</h1>
+<h1>@RenderTitleSegments(T["角色列表"])</h1>
 
 <nav class="admin-toolbar">
     <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-            <a asp-route-action="Create" class="btn btn-primary" role="button">@T["Add Role"]</a>
+            <a asp-route-action="Create" class="btn btn-primary" role="button">@T["添加角色"]</a>
         </li>
     </ul>
     <form class="form-inline my-2 my-lg-0" autocomplete="off">
-        <input id="search-box" class="form-control mr-sm-2" type="text" placeholder="@T["Search"]" autofocus="autofocus">
+        <input id="search-box" class="form-control mr-sm-2" type="text" placeholder="@T["筛选器"]" autofocus="autofocus">
     </form>
 </nav>
 
@@ -20,8 +20,8 @@
             <li class="list-group-item" data-role="@Model.RoleEntries[i].Name">
                 <div class="properties">
                     <div class="related">
-                        <a class="edit btn btn-primary btn-sm" role="button" asp-action="Edit" asp-route-id="@Model.RoleEntries[i].Name">@T["Edit"]</a>
-                        <a class="delete btn btn-danger btn-sm" asp-route-id="@Model.RoleEntries[i].Name" role="button" asp-action="Delete" itemprop="UnsafeUrl RemoveUrl">@T["Delete"]</a>
+                        <a class="edit btn btn-primary btn-sm" role="button" asp-action="Edit" asp-route-id="@Model.RoleEntries[i].Name">@T["编辑"]</a>
+                        <a class="delete btn btn-danger btn-sm" asp-route-id="@Model.RoleEntries[i].Name" role="button" asp-action="Delete" itemprop="UnsafeUrl RemoveUrl">@T["删除"]</a>
                     </div>
                     @*<input asp-for="RoleEntries[i].Selected" type="checkbox">*@
                     @Model.RoleEntries[i].Name

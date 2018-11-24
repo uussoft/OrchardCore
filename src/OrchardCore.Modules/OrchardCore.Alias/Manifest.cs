@@ -7,5 +7,5 @@ using OrchardCore.Modules.Manifest;
     Version = "2.0.0",
     Description = "The alias module enables content items to have custom logical identifier.",
     Dependencies = new [] { "OrchardCore.ContentTypes" },
-    Category = "Content Management"
+    Category = "内容管理"
 )]

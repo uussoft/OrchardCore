@@ -1,4 +1,4 @@
-﻿@model OrchardCore.Layers.ViewModels.LayerEditViewModel
+@model OrchardCore.Layers.ViewModels.LayerEditViewModel
 
 <h1>@RenderTitleSegments(T["Edit Layer - {0}", Model.Name])</h1>
 
@@ -18,5 +18,5 @@
         <textarea asp-for="Description" class="form-control" rows="3" type="text"></textarea>
     </fieldset>
 
-    <input class="button" type="submit" value="@T["Save"]" />
+    <input class="button" type="submit" value="@T["保存"]" />
 </form>

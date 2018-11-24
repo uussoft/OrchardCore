@@ -6,7 +6,7 @@ using OrchardCore.Modules.Manifest;
     Website = "http://orchardproject.net",
     Version = "2.0.0",
     Description = "The Workflows module provides tools and APIs to create custom workflows",
-    Category = "Workflows"
+    Category = "工作流"
 )]
 
 [assembly: Feature(
@@ -14,7 +14,7 @@ using OrchardCore.Modules.Manifest;
     Name = "Workflows",
     Description = "The Workflows module provides tools and APIs to create custom workflows",
     Dependencies = new[] { "OrchardCore.Liquid", "OrchardCore.Scripting" },
-    Category = "Workflows"
+    Category = "工作流"
 )]
 
 [assembly: Feature(
@@ -22,7 +22,7 @@ using OrchardCore.Modules.Manifest;
     Name = "HTTP Workflows Activities",
     Description = "Provides HTTP-related services and activities.",
     Dependencies = new[] { "OrchardCore.Workflows" },
-    Category = "Workflows"
+    Category = "工作流"
 )]
 
 [assembly: Feature(
@@ -30,5 +30,5 @@ using OrchardCore.Modules.Manifest;
     Name = "Timer Workflow Activities",
     Description = "Provides timer-based services and activities.",
     Dependencies = new[] { "OrchardCore.Workflows" },
-    Category = "Workflows"
+    Category = "工作流"
 )]

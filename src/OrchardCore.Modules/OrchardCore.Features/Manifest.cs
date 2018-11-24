@@ -11,5 +11,5 @@ using OrchardCore.Modules.Manifest;
     Id = "OrchardCore.Features",
     Description = "The Features module enables the administrator of the site to manage the installed modules as well as activate and de-activate features.",
     Dependencies = new [] { "OrchardCore.Resources" },
-    Category = "Infrastructure"
+    Category = "基础设施"
 )]

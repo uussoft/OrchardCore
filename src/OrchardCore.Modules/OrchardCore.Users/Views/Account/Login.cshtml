@@ -18,18 +18,18 @@
 <div class="row">
     <div class="col-md-8">
         <form asp-controller="Account" asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="form-horizontal">
-            <h4>@T["Use a local account to log in."]</h4>
+            <h4>@T["用户登录"]</h4>
             <hr />
             <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="UserName" class="col-md-3 control-label">@T["Username"]</label>
+                <label asp-for="UserName" class="col-md-3 control-label">@T["用户名"]</label>
                 <div class="col-md-9">
                     <input asp-for="UserName" class="form-control" autofocus />
                     <span asp-validation-for="UserName" class="text-danger"></span>
                 </div>
             </div>
             <div class="form-group">
-                <label asp-for="Password" class="col-md-3 control-label">@T["Password"]</label>
+                <label asp-for="Password" class="col-md-3 control-label">@T["密码"]</label>
                 <div class="col-md-9">
                     <input asp-for="Password" class="form-control" />
                     <span asp-validation-for="Password" class="text-danger"></span>
@@ -40,14 +40,14 @@
                     <div class="checkbox">
                         <label asp-for="RememberMe">
                             <input asp-for="RememberMe" />
-                            @T["Remember me"]
+                            @T["记住密码"]
                         </label>
                     </div>
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-md-offset-3 col-md-9">
-                    <button type="submit" class="btn btn-default">@T["Log in"]</button>
+                    <button type="submit" class="btn btn-default">@T["登录"]</button>
                 </div>
             </div>
             @if (userCanRegister)
@@ -59,7 +59,7 @@
             @if (allowResetPassword)
             {
                 <p>
-                    <a asp-controller="ResetPassword" asp-action="ForgotPassword">@T["Forgot your password?"]</a>
+                    <a asp-controller="ResetPassword" asp-action="ForgotPassword">@T["忘记密码？"]</a>
                 </p>
             }
         </form>

@@ -300,7 +300,7 @@ namespace OrchardCore.Media.Controllers
 
             if (filesOnError.Count > 0)
             {
-                return BadRequest(T["Error when moving files. Maybe they already exist on the target folder? Files on error: {0}", string.Join(",", filesOnError)].ToString());
+                return BadRequest(T["移动文件时出错，目标文件夹已经具有相同名称的资源？错误文件：{0}", string.Join(",", filesOnError)].ToString());
             }
             else
             {

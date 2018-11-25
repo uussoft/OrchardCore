@@ -64,7 +64,7 @@ namespace OrchardCore.Users.Controllers
         public async Task<IActionResult> Login(LoginViewModel model, string returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
-
+            
             if ((await _siteService.GetSiteSettingsAsync()).As<RegistrationSettings>().UsersMustValidateEmail)
             {
                 // Require that the users have a confirmed email before they can log on.

@@ -1,16 +1,16 @@
 @model EditTenantViewModel
 @inject IEnumerable<OrchardCore.Data.DatabaseProvider> DatabaseProviders
 
-<h1>@RenderTitleSegments(T["Create Tenant"])</h1>
+<h1>@RenderTitleSegments(T["创建子站点"])</h1>
 
 <div asp-validation-summary="ModelOnly"></div>
 <form asp-action="Create" method="post">
     <div class="row">
         <div class="form-group col-md-6" asp-validation-class-for="Name">
-            <label asp-for="Name">@T["Name"]</label>
+            <label asp-for="Name">@T["站点名称"]</label>
             <input asp-for="Name" class="form-control" autofocus />
             <span asp-validation-for="Name" class="text-danger"></span>
-            <span class="hint">@T["The name of the tenant."]</span>
+            <span class="hint">@T["站点名称，例如：学霸酷堂在线教育"]</span>
         </div>
     </div>
     <div class="row">
@@ -80,8 +80,8 @@
 
     <fieldset>
         <div class="form-group">
-            <button class="btn btn-primary" type="submit">@T["Create"]</button>
-            <a class="btn btn-secondary" asp-route-action="Index">@T["Cancel"]</a>
+            <button class="btn btn-primary" type="submit">@T["创建"]</button>
+            <a class="btn btn-secondary" asp-route-action="Index">@T["取消"]</a>
         </div>
     </fieldset>
 </form>

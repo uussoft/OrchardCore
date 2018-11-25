@@ -7,7 +7,7 @@ var initialized;
 var mediaApp;
 
 var root = {
-    name: 'Media Library',
+    name: '媒体资源库',
     path: '',
     folder: '',
     isDirectory: true

@@ -6,14 +6,14 @@
 
 <form asp-action="Create" method="post">
     <div class="form-group" asp-validation-class-for="Name">
-        <label asp-for="Name">@T["Name"]</label>
+        <label asp-for="Name">@T["瀵艰埅鍚嶇О"]</label>
         <span asp-validation-for="Name" class="text-danger">@T["The name is required"]</span>
         <input asp-for="Name" class="form-control" autofocus />
     </div>
     <fieldset>
         <div class="form-group">
-            <button class="btn btn-primary" type="submit">@T["创建"]</button>
-            <a class="btn btn-secondary" asp-route-action="List">@T["取消"]</a>
+            <button class="btn btn-primary" type="submit">@T["鍒涘缓"]</button>
+            <a class="btn btn-secondary" asp-route-action="List">@T["鍙栨秷"]</a>
         </div>
     </fieldset>
 </form>

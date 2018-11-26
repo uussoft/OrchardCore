@@ -6,4 +6,4 @@ using OrchardCore.Modules.Manifest;
     Website = "http://orchardproject.net",
     Version = "2.0.0",
     Description = "Enables configuration of hosting scenarios with a reverse proxy",
-    Category = "基础设施")]
+    Category = "基础功能")]

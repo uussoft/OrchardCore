@@ -28,7 +28,7 @@ namespace OrchardCore.AdminTrees
 
             // Configuration and settings menus for the AdminTree module
             builder.Add(T["配置管理"], cfg => cfg
-                    .Add(T["Admin Trees"], "1.5", admt => admt
+                    .Add(T["导航节点管理"], "1.5", admt => admt
                         .Permission(Permissions.ManageAdminTree)
                         .Action("List", "Tree", new { area = "OrchardCore.AdminTrees" })
                         .LocalNav()

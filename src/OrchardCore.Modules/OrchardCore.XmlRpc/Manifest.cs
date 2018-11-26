@@ -10,14 +10,14 @@ using OrchardCore.Modules.Manifest;
 [assembly: Feature(
     Id = "OrchardCore.XmlRpc",
     Name = "XML-RPC",
-    Description = "The XML-RPC module enables creation of contents from client applications such as Open Live Writer.",
-    Category = "基础设施"
+    Description = "XML-RPC模块支持从客户端应用程序（如Open Live Writer）创建内容。",
+    Category = "基础功能"
 )]
 
 [assembly: Feature(
     Id = "OrchardCore.RemotePublishing",
-    Name = "Remote Publishing",
-    Description = "The remote publishing feature enables creation of contents from client applications such as Open Live Writer.",
+    Name = "远程发布",
+    Description = "远程发布功能支持从客户端应用程序（如Open Live Writer）创建内容。",
     Dependencies = new [] { "OrchardCore.XmlRpc" },
-    Category = "基础设施"
+    Category = "基础功能"
 )]

@@ -11,7 +11,7 @@ using OrchardCore.Modules.Manifest;
     Id = "OrchardCore.Tenants",
     Name = "Tenants",
     Description = "Provides a way to manage tenants from the admin.",
-    Category = "基础设施",
+    Category = "基础功能",
     DefaultTenantOnly = true
 )]
 
@@ -19,6 +19,6 @@ using OrchardCore.Modules.Manifest;
     Id = "OrchardCore.Tenants.FileProvider",
     Name = "Static File Provider",
     Description = "Provides a way to serve independent static files for each tenant.",
-    Category = "基础设施",
+    Category = "基础功能",
     DefaultTenantOnly = true
 )]

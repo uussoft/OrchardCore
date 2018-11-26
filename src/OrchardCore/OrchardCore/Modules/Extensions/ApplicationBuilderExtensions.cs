@@ -10,6 +10,7 @@ namespace Microsoft.AspNetCore.Builder
     {
         /// <summary>
         /// Enables multi-tenant requests support for the current path.
+        /// 启用对当前路径的多租户请求支持。
         /// </summary>
         public static IApplicationBuilder UseOrchardCore(this IApplicationBuilder app, Action<IApplicationBuilder> configure = null)
         {

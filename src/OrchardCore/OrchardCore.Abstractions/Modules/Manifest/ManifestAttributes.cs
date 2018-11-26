@@ -7,6 +7,7 @@ namespace OrchardCore.Modules.Manifest
     /// <summary>
     /// Defines a Module which is composed of features.
     /// If the Module has only one default feature, it may be defined there.
+    /// 定义由功能组成的模块。如果模块只有一个默认功能，则可以在这里定义
     /// </summary>
     [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = false, Inherited = false)]
     public class ModuleAttribute : FeatureAttribute

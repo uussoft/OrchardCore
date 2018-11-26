@@ -6,5 +6,5 @@ using OrchardCore.Modules.Manifest;
     Website = "http://orchardproject.net",
     Version = "2.0.0",
     Description = "Adds scripting capabilities.",
-    Category = "基础设施"
+    Category = "基础功能"
 )]

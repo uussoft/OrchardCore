@@ -7,6 +7,6 @@
 @if (contentItem.ModifiedUtc.HasValue)
 {
     <div>
-        <span class="hint">@T["Last modified {0} by {1}", (object)(await DisplayAsync(await New.TimeSpan(Utc: contentItem.ModifiedUtc))), contentItem.Author]</span>
+        <span class="hint">@T["由 {0} 最后修改于 {1}", contentItem.Author, (object)(await DisplayAsync(await New.TimeSpan(Utc: contentItem.ModifiedUtc)))]</span>
     </div>
 }

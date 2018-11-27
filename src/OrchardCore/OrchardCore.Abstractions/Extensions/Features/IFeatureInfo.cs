@@ -1,5 +1,8 @@
 namespace OrchardCore.Environment.Extensions.Features
 {
+    /// <summary>
+    /// 功能信息的描述接口
+    /// </summary>
     public interface IFeatureInfo
     {
         string Id { get; }

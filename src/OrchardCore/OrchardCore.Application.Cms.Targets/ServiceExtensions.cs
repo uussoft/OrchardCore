@@ -6,7 +6,7 @@ namespace Microsoft.Extensions.DependencyInjection
     public static class ServiceExtensions
     {
         /// <summary>
-        /// Adds Orchard CMS services to the application. 
+        /// 将OrchardCMS服务添加到应用程序。
         /// </summary>
         public static IServiceCollection AddOrchardCms(this IServiceCollection services)
         {

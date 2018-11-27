@@ -1,10 +1,10 @@
 using OrchardCore.Modules.Manifest;
 
 [assembly: Module(
-    Name = "Background Tasks",
-    Author = "The Orchard Team",
-    Website = "http://orchardproject.net",
+    Name = "后台任务管理工具",
+    Author = "鼎想网络开发团队",
+    Website = "https://www.xuebakutang.com",
     Version = "2.0.0",
-    Description = "This module provides tools to manage background tasks.",
-    Category = "Tasks"
+    Description = "提供管理后台任务的工具",
+    Category = "后台任务"
 )]

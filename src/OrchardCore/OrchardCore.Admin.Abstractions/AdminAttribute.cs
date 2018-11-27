@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace OrchardCore.Admin
 {
-
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = false, Inherited = true)]
     /// <summary>
     /// When applied to an action or a controller, intercepts any request to check whether it applies to the admin site.
@@ -23,6 +22,7 @@ namespace OrchardCore.Admin
         public static void Apply(HttpContext context)
         {
             // The value isn't important, it's just a marker object
+            // 值并不是重要的，它只是一个标记对象
             context.Items[typeof(AdminAttribute)] = null;
         }
 

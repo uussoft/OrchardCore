@@ -1,11 +1,11 @@
 using OrchardCore.Modules.Manifest;
 
 [assembly: Module(
-    Name = "Content Fields",
-    Author = "The Orchard Team",
-    Website = "http://orchardproject.net",
+    Name = "内容字段",
+    Author = "鼎想网络开发团队",
+    Website = "https://www.xuebakutang.com",
     Version = "2.0.0",
-    Description = "Content Fields module adds common content fields to be used with your custom types.",
+    Description = "此模块可以给内容添加自定义字段",
     Dependencies = new [] { "OrchardCore.ContentTypes" },
     Category = "内容管理"
 )]

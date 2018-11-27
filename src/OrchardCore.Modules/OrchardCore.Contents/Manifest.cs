@@ -2,15 +2,15 @@ using OrchardCore.Modules.Manifest;
 
 [assembly: Module(
     Name = "Contents",
-    Author = "The Orchard Team",
-    Website = "http://orchardproject.net",
+    Author = "鼎想网络开发团队",
+    Website = "https://www.xuebakutang.com",
     Version = "2.0.0"
 )]
 
 [assembly: Feature(
     Id = "OrchardCore.Contents",
-    Name = "Contents",
-    Description = "The contents module enables the edition and rendering of content items.",
+    Name = "内容管理",
+    Description = "启用内容项目的编辑和显示",
     Dependencies = new[]
     {
         "OrchardCore.Settings",

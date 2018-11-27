@@ -2,6 +2,9 @@ using System;
 
 namespace OrchardCore.BackgroundTasks
 {
+    /// <summary>
+    /// 后台任务特性
+    /// </summary>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
     public class BackgroundTaskAttribute : Attribute
     {

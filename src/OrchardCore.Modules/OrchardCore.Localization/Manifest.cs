@@ -1,11 +1,11 @@
 using OrchardCore.Modules.Manifest;
 
 [assembly: Module(
-    Name = "Localization",
-    Author = "The Orchard Team",
-    Website = "http://orchardproject.net",
+    Name = "多语言",
+    Author = "鼎想网络开发团队",
+    Website = "https://www.xuebakutang.com",
     Version = "2.0.0",
-    Description = "Provides support for UI localization.",
-    Category = "Internationalization",
+    Description = "提供界面本地化的支持",
+    Category = "国际化",
     Dependencies = new[] { "OrchardCore.Settings" }
 )]

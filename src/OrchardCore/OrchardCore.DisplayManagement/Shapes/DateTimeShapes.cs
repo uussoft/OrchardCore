@@ -37,37 +37,37 @@ namespace OrchardCore.DisplayManagement.Shapes
             var time = _clock.UtcNow - Utc.Value;
 
             if (time.TotalYears() > 1)
-                return Html.Raw(Html.Encode(T["1 year ago", "{0} years ago", time.TotalYears(), time.TotalYears()].Value));
+                return Html.Raw(Html.Encode(T["1 year ago", "{0} 年之前", time.TotalYears(), time.TotalYears()].Value));
             if (time.TotalYears() < -1)
                 return Html.Raw(Html.Encode(T["in 1 year", "in {0} years", -time.TotalYears(), -time.TotalYears()].Value));
 
             if (time.TotalMonths() > 1)
-                return Html.Raw(Html.Encode(T["1 month ago", "{0} months ago", time.TotalMonths(), time.TotalMonths()].Value));
+                return Html.Raw(Html.Encode(T["1 month ago", "{0} 月之前", time.TotalMonths(), time.TotalMonths()].Value));
             if (time.TotalMonths() < -1)
                 return Html.Raw(Html.Encode(T["in 1 month", "in {0} months", -time.TotalMonths(), -time.TotalMonths()].Value));
 
             if (time.TotalWeeks() > 1)
-                return Html.Raw(Html.Encode(T["1 week ago", "{0} weeks ago", time.TotalWeeks(), time.TotalWeeks()].Value));
+                return Html.Raw(Html.Encode(T["1 week ago", "{0} 周之前", time.TotalWeeks(), time.TotalWeeks()].Value));
             if (time.TotalWeeks() < -1)
                 return Html.Raw(Html.Encode(T["in 1 week", "in {0} weeks", -time.TotalWeeks(), -time.TotalWeeks()].Value));
 
             if (time.TotalHours > 24)
-                return Html.Raw(Html.Encode(T["1 day ago", "{0} days ago", time.Days, time.Days].Value));
+                return Html.Raw(Html.Encode(T["1 day ago", "{0} 天之前", time.Days, time.Days].Value));
             if (time.TotalHours < -24)
                 return Html.Raw(Html.Encode(T["in 1 day", "in {0} days", -time.Days, -time.Days].Value));
 
             if (time.TotalMinutes > 60)
-                return Html.Raw(Html.Encode(T["1 hour ago", "{0} hours ago", time.Hours, time.Hours].Value));
+                return Html.Raw(Html.Encode(T["1 hour ago", "{0} 小时之前", time.Hours, time.Hours].Value));
             if (time.TotalMinutes < -60)
                 return Html.Raw(Html.Encode(T["in 1 hour", "in {0} hours", -time.Hours, -time.Hours].Value));
 
             if (time.TotalSeconds > 60)
-                return Html.Raw(Html.Encode(T["1 minute ago", "{0} minutes ago", time.Minutes, time.Minutes].Value));
+                return Html.Raw(Html.Encode(T["1 minute ago", "{0} 分钟之前", time.Minutes, time.Minutes].Value));
             if (time.TotalSeconds < -60)
                 return Html.Raw(Html.Encode(T["in 1 minute", "in {0} minutes", -time.Minutes, -time.Minutes].Value));
 
             if (time.TotalSeconds > 10)
-                return Html.Raw(Html.Encode(T["1 second ago", "{0} seconds ago", time.Seconds, time.Seconds].Value)); //aware that the singular won't be used
+                return Html.Raw(Html.Encode(T["1 second ago", "{0} 秒之前", time.Seconds, time.Seconds].Value)); //aware that the singular won't be used
             if (time.TotalSeconds < -10)
                 return Html.Raw(Html.Encode(T["in 1 second", "in {0} seconds", -time.Seconds, -time.Seconds].Value));
 

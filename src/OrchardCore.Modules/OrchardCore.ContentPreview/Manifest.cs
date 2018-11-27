@@ -1,11 +1,11 @@
 using OrchardCore.Modules.Manifest;
 
 [assembly: Module(
-    Name = "Content Preview",
-    Author = "The Orchard Team",
-    Website = "http://orchardproject.net",
+    Name = "内容预览",
+    Author = "鼎想网络开发团队",
+    Website = "https://www.xuebakutang.com",
     Version = "2.0.0",
-    Description = "The content Preview module enables live content edition and content preview.",
+    Description = "此模块支持实时内容编辑和内容预览",
     Dependencies = new [] { "OrchardCore.Contents" },
     Category = "内容管理"
 )]

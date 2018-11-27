@@ -123,7 +123,7 @@ namespace OrchardCore.Features.Controllers
                         foreach (var feature in enabledFeatures.ToList())
                         {
                             var featureName = availableFeatures.First(fi => fi.Id == feature.Id).Name;
-                            _notifier.Success(T["{0} was enabled", featureName]);
+                            _notifier.Success(T["{0}被启用", featureName]);
                         }
                         break;
                     case FeaturesBulkAction.Disable:
@@ -131,7 +131,7 @@ namespace OrchardCore.Features.Controllers
                         foreach (var feature in disabledFeatures.ToList())
                         {
                             var featureName = availableFeatures.First(fi => fi.Id == feature.Id).Name;
-                            _notifier.Success(T["{0} was disabled", featureName]);
+                            _notifier.Success(T["{0}被禁用", featureName]);
                         }
                         break;
                     case FeaturesBulkAction.Toggle:
@@ -139,14 +139,14 @@ namespace OrchardCore.Features.Controllers
                         foreach (var feature in enabledFeaturesToggle.ToList())
                         {
                             var featureName = availableFeatures.First(fi => fi.Id == feature.Id).Name;
-                            _notifier.Success(T["{0} was enabled", featureName]);
+                            _notifier.Success(T["{0}被启用", featureName]);
                         }
 
                         var disabledFeaturesToggle = await _shellFeaturesManager.DisableFeaturesAsync(idFeaturesEnabled, force == true);
                         foreach (var feature in disabledFeaturesToggle.ToList())
                         {
                             var featureName = availableFeatures.First(fi => fi.Id == feature.Id).Name;
-                            _notifier.Success(T["{0} was disabled", featureName]);
+                            _notifier.Success(T["{0}被禁用", featureName]);
                         }
                         break;
                     case FeaturesBulkAction.Update:
@@ -193,7 +193,7 @@ namespace OrchardCore.Features.Controllers
 
             await _shellFeaturesManager.DisableFeaturesAsync(new[] { feature }, force: true);
 
-            _notifier.Success(T["{0} was disabled", feature.Name ?? feature.Id]);
+            _notifier.Success(T["{0}被禁用", feature.Name ?? feature.Id]);
 
             return Redirect(nextUrl);
         }
@@ -216,7 +216,7 @@ namespace OrchardCore.Features.Controllers
 
             await _shellFeaturesManager.EnableFeaturesAsync(new[] { feature }, force: true);
 
-            _notifier.Success(T["{0} was enabled", feature.Name ?? feature.Id]);
+            _notifier.Success(T["{0}被启用", feature.Name ?? feature.Id]);
 
             return Redirect(nextUrl);
         }

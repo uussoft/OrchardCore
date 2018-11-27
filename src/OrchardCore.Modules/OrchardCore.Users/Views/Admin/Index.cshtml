@@ -1,12 +1,12 @@
 @model UsersIndexViewModel
 
 
-<h1>@RenderTitleSegments(T["Users"])</h1>
+<h1>@RenderTitleSegments(T["用户管理"])</h1>
 
 <nav class="admin-toolbar">
     <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-            <a asp-route-action="Create" class="btn btn-primary" role="button">@T["Add User"]</a>
+            <a asp-route-action="Create" class="btn btn-primary" role="button">@T["添加用户"]</a>
         </li>
         @*<li class="nav-item">
             <div class="btn-group">
@@ -38,8 +38,8 @@
             </select>*@
     </ul>
     <form asp-action="Index" method="get" class="form-inline">
-        <input id="search-box" asp-for="Options.Search" class="form-control mr-sm-2" type="text" placeholder="@T["Search"]" autofocus="autofocus">
-        <button type="submit" class="btn btn-secondary my-2 my-sm-0">@T["Search"]</button>
+        <input id="search-box" asp-for="Options.Search" class="form-control mr-sm-2" type="text" placeholder="@T["搜索用户"]" autofocus="autofocus">
+        <button type="submit" class="btn btn-secondary my-2 my-sm-0">@T["搜索"]</button>
     </form>
 </nav>
 

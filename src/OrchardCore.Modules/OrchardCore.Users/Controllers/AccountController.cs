@@ -99,7 +99,7 @@ namespace OrchardCore.Users.Controllers
                 //}
                 else
                 {
-                    ModelState.AddModelError(string.Empty, T["Invalid login attempt."]);
+                    ModelState.AddModelError(string.Empty, T["尝试登录失败"]);
                     return View(model);
                 }
             }

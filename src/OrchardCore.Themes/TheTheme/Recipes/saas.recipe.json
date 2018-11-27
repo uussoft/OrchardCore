@@ -1,7 +1,7 @@
 {
   "name": "SaaS",
   "displayName": "Software as a Service",
-  "description": "Provides default SaaS features like managing multiple websites.",
+  "description": "提供默认的SaaS功能，例如管理多个站点",
   "author": "The Orchard Team",
   "website": "http://orchardproject.net",
   "version": "2.0",

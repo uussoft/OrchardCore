@@ -109,7 +109,7 @@
                                             <h5>@featureName</h5>
                                         }
 
-                                        <p class="text-muted">@feature.Descriptor.Description</p>
+                                        <p class="text-muted">@T["功能描述"]：@feature.Descriptor.Description</p>
                                         <div>
                                             @if (feature.FeatureDependencies != null && feature.FeatureDependencies.Any())
                                             {
@@ -139,7 +139,7 @@
                                             if (feature.DependentFeatures.Any())
                                             {
                                                 var dependentFeatures = new HtmlString(String.Join(" ", feature.DependentFeatures.Select(f => f.Name)));
-                                                confirmationMessage = T["禁用此项功能的同时会禁用如下依赖功能：{0}", dependentFeatures];
+                                                confirmationMessage = T["禁用此项功能的同时会禁用如下依赖此功能的模块：{0}", dependentFeatures];
                                             }
                                             <a asp-action="Disable" asp-route-id="@feature.Descriptor.Id" class="btn btn-danger btn-sm" data-message="@confirmationMessage" itemprop="UnsafeUrl RemoveUrl">@T["禁用"]</a>
                                         }

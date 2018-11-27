@@ -4,12 +4,12 @@ using OrchardCore.Environment.Extensions.Features;
 namespace OrchardCore.Features.Models 
 {
     /// <summary>
-    /// Represents a module's feature.
+    /// 表示模块的功能
     /// </summary>
     public class ModuleFeature 
     {
         /// <summary>
-        /// The feature descriptor.
+        /// 功能特征描述
         /// </summary>
         public IFeatureInfo Descriptor  { get; set; }
 
